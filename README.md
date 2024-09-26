@@ -1,8 +1,11 @@
-# Inception
+# Project Introduction
 
-The project is part of 1337 cursus and is an introduction to Docker and containers. The goal of this project is to create an infrastructure that includes Nginx, Wordpress and MariaDB. Each one of them is running in an isolated container, and linked using Docker netowrk. While MariaDB and Wordpress data is stored using Docker volumes.
+In this project, I undertook the challenge of building a small-scale infrastructure using Docker, focusing on creating a multi-service application within a Virtual Machine environment. The primary objective was to deepen my understanding of containerization and orchestration through Docker Compose, while adhering to specific requirements that ensured a solid grasp of best practices in Docker file management and service configuration.
 
-I used Nginx as a server to handle upcoming requests, Wordpress as a content management system, and MariaDB to store users data in the database. When the user sends a request Ngnix goes to the folder where Wordpress files are and search for the requested file and returns the requested file in case it exists.
+The project involved structuring the application with various services, including NGINX for web serving, WordPress with PHP-FPM for dynamic content, and MariaDB as the database backend. Each service was encapsulated within its own Docker container, and I was tasked with writing custom Dockerfiles for each service, eschewing pre-built images to foster a deeper understanding of Docker’s capabilities.
 
-## What is Docker and containers?
-Docker is a platform that helps us create an isolated environment from the host operating system where we can run our app without interfering with the host os. A common problem developers encounter when they are working on an application is the conflict that occur because each one of them is working on a different operating system with different library versions. Containers solved this issue by creating an isolated place inside the host os where they can put their app configuration and libraries needed for the app. By doing this developers can work on the same containers and won't have conflicts.
+To manage the build and deployment process efficiently, I created a Makefile that orchestrated the setup, building Docker images and configuring networking between the containers as specified. This included implementing persistent volumes for the WordPress database and website files, ensuring data integrity across container restarts.
+
+Throughout the project, I delved into documentation and resources on Docker, which proved invaluable for overcoming challenges and refining my approach. This experience not only solidified my understanding of Docker and container orchestration but also equipped me with practical skills in system design and network configuration, laying a strong foundation for future projects in software development and DevOps.
+
+Feel free to explore the source files in the srcs directory and the Makefile at the root of the project to see the structure and implementation in detail!
